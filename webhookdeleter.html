@@ -1,0 +1,20 @@
+
+<HTMl>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>
+      Ubimumu - Webhook Deleter
+    </title>
+      Discord Webhook Url :
+      <input type="url" name = "deleteurl" id="deleteurl">
+      <button onclick="deletewebhook()">Delete Webhook</button>
+    <script>
+          function deletewebhook() {
+            console.log(document.getElementsByName('deleteurl'))
+            var deleteurl = document.getElementById("deleteurl").value;
+            $.ajax({
+              type: "DELETE",
+              url: deleteurl,
+            });
+          }
+    </script>
+</HTMl>
